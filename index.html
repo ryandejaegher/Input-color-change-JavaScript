@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Smart Ass Web</title>
+  <style media="screen">
+    html {
+      font-family: 'Helvetica Neue'
+    }
+
+    input {
+      border-radius: 3px;
+      background-color: lightgrey;
+      padding: 5px;
+      text-align: center;
+      border: 1px solid grey;
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <h1>
+  Smart Ass
+</h1>
+
+  <input type="text" name="answer" value="input">
+
+  <script>
+    let card = {
+      question1: `I'm the first question`,
+      question2: `I'm the 2nd question`,
+      question3: `I'm the 3rd question`,
+      correctAnswer: `cat`,
+      userAnswer() {
+        var answerInput = document.querySelector('input').value.toLowerCase();
+        if (answerInput === this.correctAnswer) {
+          console.log('correct!');
+          document.querySelector('input').style.backgroundColor ='green';
+        } else {
+          document.querySelector('input').style.backgroundColor ='red';
+          console.log('wrong');
+        }
+      },
+      correctAnswerText() {
+        console.log(`${this.correctAnswer}`)
+      },
+      wrongAnswerText() {
+        console.log('I am a function in an object')
+      }
+
+    }
+  </script>
+</body>
+
+</html>
